@@ -93,9 +93,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1731179647214353917}
   - component: {fileID: 8629121090443352884}
+  - component: {fileID: 3163915120895301337}
   m_Layer: 0
   m_Name: Mine
-  m_TagString: Untagged
+  m_TagString: OreMine
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -147,6 +148,21 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 22, y: 10.138891, z: 10.617371}
   m_Center: {x: 0.05123329, y: 5.191102, z: 4.8086853}
+--- !u!114 &3163915120895301337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4933458395014077390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d31a2024ca9eb0e42a6b09b42b3981f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buildName: Ore Mine
+  buildDescription: A functional mine, produces a varied number of ore. (Only 5 workers
+    can work at the mine at the same time).
 --- !u!1 &6882253224729192019
 GameObject:
   m_ObjectHideFlags: 0

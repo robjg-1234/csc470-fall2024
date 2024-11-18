@@ -420,9 +420,10 @@ GameObject:
   m_Component:
   - component: {fileID: 547537682218134454}
   - component: {fileID: 4013168779972874993}
+  - component: {fileID: 216979647106263701}
   m_Layer: 0
   m_Name: WoodForest
-  m_TagString: Untagged
+  m_TagString: ChoppedForest
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -485,6 +486,22 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 22, y: 10.138891, z: 10.617371}
   m_Center: {x: 0.05123329, y: 5.191102, z: 4.8086853}
+--- !u!114 &216979647106263701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1583974699641725137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d31a2024ca9eb0e42a6b09b42b3981f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buildName: Chopped Forest
+  buildDescription: The remains of a forest, due to the desforestation, the boars
+    have fled the area. Now, you can gather wood from this place. (Only 3 workers
+    can collect wood at the same time).
 --- !u!1 &1599531739970978362
 GameObject:
   m_ObjectHideFlags: 0

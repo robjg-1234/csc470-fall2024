@@ -74,9 +74,10 @@ GameObject:
   m_Component:
   - component: {fileID: 261599080695497564}
   - component: {fileID: 7406341883873981184}
+  - component: {fileID: 7010340374552250887}
   m_Layer: 0
   m_Name: Forest
-  m_TagString: Untagged
+  m_TagString: Forest
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -133,6 +134,21 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 22, y: 10.138891, z: 10.617371}
   m_Center: {x: 0.05123329, y: 5.191102, z: 4.8086853}
+--- !u!114 &7010340374552250887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8960361861566550833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d31a2024ca9eb0e42a6b09b42b3981f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buildName: Forest
+  buildDescription: A peaceful space, it can be used to hunt down boars for food
+    or you can chop it down for wood. (Only 3 workers can hunt at the same time).
 --- !u!1001 &109581524696257144
 PrefabInstance:
   m_ObjectHideFlags: 0

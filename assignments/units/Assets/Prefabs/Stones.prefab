@@ -176,9 +176,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1307778206139751391}
   - component: {fileID: 2694962208492518869}
+  - component: {fileID: 8721964166252899444}
   m_Layer: 0
   m_Name: Stones
-  m_TagString: Untagged
+  m_TagString: StoneCliff
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -224,6 +225,21 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 22, y: 10.138891, z: 10.617371}
   m_Center: {x: 0.05123329, y: 5.191102, z: 4.8086853}
+--- !u!114 &8721964166252899444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2548864261622559627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d31a2024ca9eb0e42a6b09b42b3981f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buildName: Stone Cliffs
+  buildDescription: With the proper materials we can convert this place into an Ore
+    Mine.
 --- !u!1 &5344316190486707850
 GameObject:
   m_ObjectHideFlags: 0
