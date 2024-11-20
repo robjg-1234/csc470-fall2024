@@ -12,6 +12,7 @@ TagManager:
   - OreMine
   - House
   - desolatedArea
+  - worker
   layers:
   - Default
   - TransparentFX

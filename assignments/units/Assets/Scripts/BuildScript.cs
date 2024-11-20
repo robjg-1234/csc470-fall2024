@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class BuildScript : MonoBehaviour
@@ -10,6 +11,7 @@ public class BuildScript : MonoBehaviour
     public int maxWorkers;
     public int currentWorkers = 0;
     public int baseProduction = 0;
+    public int expectedWorkers = 0;
     private void OnEnable()
     {
         GameManager.rateChanges += changeRate;
@@ -19,7 +21,8 @@ public class BuildScript : MonoBehaviour
     {
         if (this.CompareTag("Crastle"))
         {
-            maxWorkers = 0;
+            GameManager.instance.mainBase = this;
+            maxWorkers = 5;
             currentWorkers = 5;
         } else if (this.CompareTag("Pond"))
         {
@@ -61,10 +64,10 @@ public class BuildScript : MonoBehaviour
     }
     public int stateOfWorkers()
     {
-        if (currentWorkers > 0 && currentWorkers < maxWorkers)
+        if (currentWorkers > 0 && currentWorkers+expectedWorkers < maxWorkers)
         {
             return 1;
-        } else if(currentWorkers == 0)
+        } else if(currentWorkers == 0 && expectedWorkers < maxWorkers)
         {
             return 2;
         }
@@ -82,5 +85,4 @@ public class BuildScript : MonoBehaviour
         GameManager.instance.selectUnit(null);
         GameManager.rateChanges -= changeRate;
     }
-
 }

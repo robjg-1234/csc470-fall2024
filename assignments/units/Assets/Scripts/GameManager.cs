@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.AI;
 using UnityEngine.UI;
 
 
@@ -12,6 +13,7 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     public static Action rateChanges;
     public Camera mainCamera;
+    public GameObject workerPrefab;
     public GameObject housePrefab;
     public GameObject prefabMine;
     public GameObject prefabchoppedWood;
@@ -41,15 +43,13 @@ public class GameManager : MonoBehaviour
     public TMP_Text dayText;
     public TMP_Text dayTimer;
     //Resources
-    int totalWorkers = 5;
-    int availableWorkers = 5;
     int oreAmount = 25;
     int woodAmount = 50;
     int foodAmount = 20;
     int foodRate = 0;
     int woodRate = 0;
     int oreRate = 0;
-    float timer = 2;
+    float timer = 1;
     int dayCount = 1;
     int hourCount = 0;
     bool gameEnded = false;
@@ -57,17 +57,20 @@ public class GameManager : MonoBehaviour
     int houses = 1;
     List<GameObject> previews = new List<GameObject>();
     BuildScript selectedBuilding;
+    BuildScript provisionalBuild;
+    public BuildScript mainBase;
     public void addWorkers()
     {
         if (selectedBuilding != null)
         {
             if (selectedBuilding.stateOfWorkers() > 0)
             {
-                if (availableWorkers > 0)
+                if (mainBase.currentWorkers > 0)
                 {
-                    selectedBuilding.currentWorkers += 1;
-                    availableWorkers -= 1;
-                    rateChanges.Invoke();
+                    selectedBuilding.expectedWorkers++;
+                    mainBase.currentWorkers--;
+                    WorkerScript newWorker = Instantiate(workerPrefab, transform.position, Quaternion.identity).GetComponent<WorkerScript>();
+                    newWorker.moveTowardsBuilding(selectedBuilding);
                     newGlobalRate(1, selectedBuilding.baseProduction);
                 }
             }
@@ -79,8 +82,10 @@ public class GameManager : MonoBehaviour
         {
             if (selectedBuilding.stateOfWorkers() < 2)
             {
-                selectedBuilding.currentWorkers -= 1;
-                availableWorkers += 1;
+                
+                selectedBuilding.currentWorkers--;
+                WorkerScript newWorker = Instantiate(workerPrefab, selectedBuilding.transform.position, Quaternion.identity).GetComponent<WorkerScript>();
+                newWorker.moveTowardsBuilding(mainBase);
                 rateChanges.Invoke();
                 newGlobalRate(-1, selectedBuilding.baseProduction);
             }
@@ -108,6 +113,7 @@ public class GameManager : MonoBehaviour
             crastleInfoPanel();
             updateTopPart();
             controlSecondaryTabs();
+            rateChanges.Invoke();
             if (Input.GetKeyDown(KeyCode.Tab))
             {
                 toggleTab();
@@ -134,7 +140,7 @@ public class GameManager : MonoBehaviour
             }
             else
             {
-                timer = 2;
+                timer = 1;
                 hourCount += 1;
                 if (hourCount > 23)
                 {
@@ -149,22 +155,33 @@ public class GameManager : MonoBehaviour
                     }
                     hourCount = 0;
                     dayCount += 1;
-                    if (foodAmount >= totalWorkers * 8)
+                    if (foodAmount >= mainBase.maxWorkers * 8)
                     {
-                        totalWorkers += 1;
-                        availableWorkers += 1;
+                        mainBase.currentWorkers += 1;
+                        mainBase.maxWorkers += 1;
                     }
-                    if (foodAmount <= totalWorkers * 2)
+                    if (foodAmount <= mainBase.maxWorkers * 2)
                     {
-                        totalWorkers = Mathf.RoundToInt(totalWorkers/2);
-                        if (availableWorkers > 0)
+                        if (provisionalBuild != null)
                         {
-                            availableWorkers -= 1;
+                            if (provisionalBuild.currentWorkers > 0)
+                            {
+                                provisionalBuild.currentWorkers -= 1;
+                            }
+                            else
+                            {
+                                mainBase.currentWorkers -= 1;
+                            }
                         }
+                        else
+                        {
+                            mainBase.currentWorkers -= 1;
+                        }
+                        mainBase.maxWorkers -= 1;
                         deathCount += 1;
                     }
-                    foodAmount -= totalWorkers * 4;
-                    if (happinessSlider.value <= 0 || deathCount>4)
+                    foodAmount -= mainBase.maxWorkers * 4;
+                    if (happinessSlider.value <= 0 || deathCount>4 || dayCount>14)
                     {
                         gameEnded = true;
                     }
@@ -173,6 +190,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
+            buildPreview.SetActive(false);
             endGame();
         }
     }
@@ -225,7 +243,7 @@ public class GameManager : MonoBehaviour
             if (oreAmount >= 25)
             {
                 foodRate -= selectedBuilding.rate;
-                availableWorkers += selectedBuilding.currentWorkers;
+                mainBase.currentWorkers += selectedBuilding.currentWorkers;
                 oreAmount -= 25;
                 Vector3 currentPos = selectedBuilding.transform.position;
                 Quaternion currentRotation = selectedBuilding.transform.rotation;
@@ -250,6 +268,8 @@ public class GameManager : MonoBehaviour
         {
             if (woodAmount>=30 && oreAmount >= 50)
             {
+                woodAmount-=30;
+                oreAmount -= 50;
                 Vector3 currentPos = selectedBuilding.transform.position;
                 Quaternion currentRotation = selectedBuilding.transform.rotation;
                 Destroy(selectedBuilding.gameObject);
@@ -265,7 +285,7 @@ public class GameManager : MonoBehaviour
         oreText.text = oreAmount.ToString();
         foodText.text = foodAmount.ToString();
         woodText.text = woodAmount.ToString();
-        peopleText.text = totalWorkers.ToString();
+        peopleText.text = mainBase.maxWorkers.ToString();
         dayText.text = "Day " + dayCount;
         dayTimer.text = hourCount + ":00";
     }
@@ -291,19 +311,19 @@ public class GameManager : MonoBehaviour
 
     void crastleInfoPanel()
     {
-        available.text = availableWorkers + "/" + totalWorkers;
-        foodRatesText.text = (totalWorkers * 4) + "/day";
+        available.text = mainBase.currentWorkers + "/" + mainBase.maxWorkers;
+        foodRatesText.text = (mainBase.maxWorkers * 4) + "/day";
         oreRatesText.text = oreRate + "/day";
         woodRatesText.text = woodRate + "/day";
     }
 
     void happinessCheck()
     {
-        if (foodAmount <= totalWorkers * 2)
+        if (foodAmount <= mainBase.maxWorkers * 2)
         {
             happinessSlider.value -= 0.3f;
         }
-        else if (foodAmount < totalWorkers * 4)
+        else if (foodAmount < mainBase.maxWorkers * 4)
         {
             happinessSlider.value -= 0.2f;
         }
@@ -318,7 +338,7 @@ public class GameManager : MonoBehaviour
                 happinessSlider.value = 1f;
             }
         }
-        if (availableWorkers > 0)
+        if (mainBase.currentWorkers > 0)
         {
             happinessSlider.value -= 0.1f;
         }
@@ -333,7 +353,7 @@ public class GameManager : MonoBehaviour
                 happinessSlider.value = 1f;
             }
         }
-        if (houses*4 < totalWorkers)
+        if (houses*4 < mainBase.maxWorkers)
         {
             happinessSlider.value -= 0.05f;
         } else
@@ -350,19 +370,19 @@ public class GameManager : MonoBehaviour
     }
     void endGame()
     {
-        if (dayCount > 7)
+        if (dayCount > 14)
         {
             if (happinessSlider.value > 0.75 && deathCount == 0)
             {
-                summaryText.text = "Congratulations! You survived the 7 days and kept your people happy.";
+                summaryText.text = "Congratulations! You survived the 14 days and kept your people happy.";
             }
             else if (happinessSlider.value > 0.75 && deathCount < 3)
             {
-                summaryText.text = "Congratulations! You survived the 7 days and kept your people happy, but at the cost of some individuals.";
+                summaryText.text = "Congratulations! You survived the 14 days and kept your people happy, but at the cost of some individuals.";
             }
             else
             {
-                summaryText.text = "Unfortunate! You were able to survive the 7 days but your people were not happy which led to a revolution and your imminent death.";
+                summaryText.text = "Unfortunate! You were able to survive the 14 days but your people were not happy which led to a revolution and your imminent death.";
             }
         }
         else
