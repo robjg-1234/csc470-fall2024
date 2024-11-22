@@ -155,11 +155,6 @@ public class GameManager : MonoBehaviour
                     }
                     hourCount = 0;
                     dayCount += 1;
-                    if (foodAmount >= mainBase.maxWorkers * 8)
-                    {
-                        mainBase.currentWorkers += 1;
-                        mainBase.maxWorkers += 1;
-                    }
                     if (foodAmount <= mainBase.maxWorkers * 2)
                     {
                         if (provisionalBuild != null)
@@ -181,6 +176,11 @@ public class GameManager : MonoBehaviour
                         deathCount += 1;
                     }
                     foodAmount -= mainBase.maxWorkers * 4;
+                    if (foodAmount >= mainBase.maxWorkers * 8)
+                    {
+                        mainBase.currentWorkers += 1;
+                        mainBase.maxWorkers += 1;
+                    }
                     if (happinessSlider.value <= 0 || deathCount>4 || dayCount>14)
                     {
                         gameEnded = true;
