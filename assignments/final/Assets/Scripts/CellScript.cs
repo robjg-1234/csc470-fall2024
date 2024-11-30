@@ -74,6 +74,7 @@ public class CellScript : MonoBehaviour
         {
             //Mirror Cell
             rend.material.color = new Color(1f, 0.6578f, 0f, 1);
+            isFilled = true;
         }
         defaultColor = rend.material.color;
 
