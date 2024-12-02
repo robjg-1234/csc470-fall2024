@@ -343,6 +343,16 @@ public class PuzzleScript : MonoBehaviour
                     }
                     if (filledCells == cellCount)
                     {
+                        for (int i = 0; i < yHeight; i++)
+                        {
+                            for (int j = 0; j < xHeight; j++)
+                            {
+                                if (puzzleCells[i, j] != null)
+                                {
+                                    puzzleCells[i, j].fillCell(Color.green);
+                                }
+                            }
+                        }
                         //puzzle solved
                         isSolved = true;
                         manager.userBeatAPuzzle();
