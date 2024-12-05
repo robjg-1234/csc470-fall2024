@@ -160,7 +160,7 @@ public class CellScript : MonoBehaviour
                     CellScript tempCell = parentScript?.puzzleCells[cellRow - 1, cellColumn];
                     if (tempCell != null)
                     {
-                        if (!tempCell.checkAvailability(2))
+                        if (tempCell.checkAvailability(2))
                         {
                             targetCell = tempCell;
                             isAbilityUsable = true;
