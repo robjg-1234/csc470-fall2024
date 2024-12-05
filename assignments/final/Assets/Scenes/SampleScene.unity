@@ -133,7 +133,6 @@ GameObject:
   - component: {fileID: 1180876}
   - component: {fileID: 1180880}
   - component: {fileID: 1180879}
-  - component: {fileID: 1180878}
   - component: {fileID: 1180877}
   m_Layer: 0
   m_Name: Puzzle Cell (6)
@@ -177,27 +176,6 @@ MonoBehaviour:
   prevCell: {fileID: 0}
   defaultColor: {r: 0, g: 0, b: 0, a: 0}
   storedCells: []
---- !u!65 &1180878
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1180875}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1180879
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -994,7 +972,6 @@ GameObject:
   - component: {fileID: 109666939}
   - component: {fileID: 109666943}
   - component: {fileID: 109666942}
-  - component: {fileID: 109666941}
   - component: {fileID: 109666940}
   m_Layer: 0
   m_Name: Puzzle Cell (3)
@@ -1038,27 +1015,6 @@ MonoBehaviour:
   prevCell: {fileID: 0}
   defaultColor: {r: 0, g: 0, b: 0, a: 0}
   storedCells: []
---- !u!65 &109666941
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 109666938}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &109666942
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1763,7 +1719,6 @@ GameObject:
   - component: {fileID: 170440011}
   - component: {fileID: 170440015}
   - component: {fileID: 170440014}
-  - component: {fileID: 170440013}
   - component: {fileID: 170440012}
   m_Layer: 0
   m_Name: Puzzle Cell (5)
@@ -1807,27 +1762,6 @@ MonoBehaviour:
   prevCell: {fileID: 0}
   defaultColor: {r: 0, g: 0, b: 0, a: 0}
   storedCells: []
---- !u!65 &170440013
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 170440010}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &170440014
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2976,7 +2910,6 @@ GameObject:
   - component: {fileID: 341144580}
   - component: {fileID: 341144584}
   - component: {fileID: 341144583}
-  - component: {fileID: 341144582}
   - component: {fileID: 341144581}
   m_Layer: 0
   m_Name: Puzzle Cell (1)
@@ -3020,27 +2953,6 @@ MonoBehaviour:
   prevCell: {fileID: 0}
   defaultColor: {r: 0, g: 0, b: 0, a: 0}
   storedCells: []
---- !u!65 &341144582
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 341144579}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &341144583
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6760,7 +6672,6 @@ GameObject:
   - component: {fileID: 890926019}
   - component: {fileID: 890926023}
   - component: {fileID: 890926022}
-  - component: {fileID: 890926021}
   - component: {fileID: 890926020}
   m_Layer: 0
   m_Name: Puzzle Cell (7)
@@ -6804,27 +6715,6 @@ MonoBehaviour:
   prevCell: {fileID: 0}
   defaultColor: {r: 0, g: 0, b: 0, a: 0}
   storedCells: []
---- !u!65 &890926021
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 890926018}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &890926022
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8481,7 +8371,6 @@ GameObject:
   - component: {fileID: 1066599551}
   - component: {fileID: 1066599555}
   - component: {fileID: 1066599554}
-  - component: {fileID: 1066599553}
   - component: {fileID: 1066599552}
   m_Layer: 0
   m_Name: Puzzle Cell (1)
@@ -8525,27 +8414,6 @@ MonoBehaviour:
   prevCell: {fileID: 0}
   defaultColor: {r: 0, g: 0, b: 0, a: 0}
   storedCells: []
---- !u!65 &1066599553
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1066599550}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1066599554
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8681,7 +8549,6 @@ GameObject:
   - component: {fileID: 1080139371}
   - component: {fileID: 1080139375}
   - component: {fileID: 1080139374}
-  - component: {fileID: 1080139373}
   - component: {fileID: 1080139372}
   m_Layer: 0
   m_Name: Puzzle Cell (10)
@@ -8725,27 +8592,6 @@ MonoBehaviour:
   prevCell: {fileID: 0}
   defaultColor: {r: 0, g: 0, b: 0, a: 0}
   storedCells: []
---- !u!65 &1080139373
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1080139370}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1080139374
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10236,6 +10082,7 @@ MonoBehaviour:
   settingsMenu: {fileID: 2111347560}
   sensSlider: {fileID: 52213671}
   sensField: {fileID: 743814469}
+  pauseAvailable: 1
 --- !u!4 &1270526774
 Transform:
   m_ObjectHideFlags: 0
@@ -10267,7 +10114,6 @@ GameObject:
   - component: {fileID: 1283976542}
   - component: {fileID: 1283976546}
   - component: {fileID: 1283976545}
-  - component: {fileID: 1283976544}
   - component: {fileID: 1283976543}
   m_Layer: 0
   m_Name: Puzzle Cell
@@ -10311,27 +10157,6 @@ MonoBehaviour:
   prevCell: {fileID: 0}
   defaultColor: {r: 0, g: 0, b: 0, a: 0}
   storedCells: []
---- !u!65 &1283976544
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1283976541}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1283976545
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10789,7 +10614,6 @@ GameObject:
   - component: {fileID: 1346760434}
   - component: {fileID: 1346760438}
   - component: {fileID: 1346760437}
-  - component: {fileID: 1346760436}
   - component: {fileID: 1346760435}
   m_Layer: 0
   m_Name: Puzzle Cell (9)
@@ -10833,27 +10657,6 @@ MonoBehaviour:
   prevCell: {fileID: 0}
   defaultColor: {r: 0, g: 0, b: 0, a: 0}
   storedCells: []
---- !u!65 &1346760436
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1346760433}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1346760437
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11624,7 +11427,6 @@ GameObject:
   - component: {fileID: 1487938236}
   - component: {fileID: 1487938239}
   - component: {fileID: 1487938238}
-  - component: {fileID: 1487938237}
   - component: {fileID: 1487938240}
   m_Layer: 0
   m_Name: Puzzle Cell
@@ -11648,27 +11450,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 27696023}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1487938237
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1487938235}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1487938238
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -15806,7 +15587,6 @@ GameObject:
   - component: {fileID: 1652559252}
   - component: {fileID: 1652559256}
   - component: {fileID: 1652559255}
-  - component: {fileID: 1652559254}
   - component: {fileID: 1652559253}
   m_Layer: 0
   m_Name: Puzzle Cell (3)
@@ -15850,27 +15630,6 @@ MonoBehaviour:
   prevCell: {fileID: 0}
   defaultColor: {r: 0, g: 0, b: 0, a: 0}
   storedCells: []
---- !u!65 &1652559254
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1652559251}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1652559255
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -26745,7 +26504,6 @@ GameObject:
   - component: {fileID: 1882941070}
   - component: {fileID: 1882941074}
   - component: {fileID: 1882941073}
-  - component: {fileID: 1882941072}
   - component: {fileID: 1882941071}
   m_Layer: 0
   m_Name: Puzzle Cell (5)
@@ -26789,27 +26547,6 @@ MonoBehaviour:
   prevCell: {fileID: 0}
   defaultColor: {r: 0, g: 0, b: 0, a: 0}
   storedCells: []
---- !u!65 &1882941072
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1882941069}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1882941073
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -26871,7 +26608,6 @@ GameObject:
   - component: {fileID: 1885236699}
   - component: {fileID: 1885236703}
   - component: {fileID: 1885236702}
-  - component: {fileID: 1885236701}
   - component: {fileID: 1885236700}
   m_Layer: 0
   m_Name: Puzzle Cell (2)
@@ -26915,27 +26651,6 @@ MonoBehaviour:
   prevCell: {fileID: 0}
   defaultColor: {r: 0, g: 0, b: 0, a: 0}
   storedCells: []
---- !u!65 &1885236701
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1885236698}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1885236702
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -27289,7 +27004,6 @@ GameObject:
   - component: {fileID: 1924636149}
   - component: {fileID: 1924636153}
   - component: {fileID: 1924636152}
-  - component: {fileID: 1924636151}
   - component: {fileID: 1924636150}
   m_Layer: 0
   m_Name: Puzzle Cell (2)
@@ -27333,27 +27047,6 @@ MonoBehaviour:
   prevCell: {fileID: 0}
   defaultColor: {r: 0, g: 0, b: 0, a: 0}
   storedCells: []
---- !u!65 &1924636151
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1924636148}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1924636152
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -29738,7 +29431,6 @@ GameObject:
   - component: {fileID: 2034514374}
   - component: {fileID: 2034514378}
   - component: {fileID: 2034514377}
-  - component: {fileID: 2034514376}
   - component: {fileID: 2034514375}
   m_Layer: 0
   m_Name: Puzzle Cell (4)
@@ -29782,27 +29474,6 @@ MonoBehaviour:
   prevCell: {fileID: 0}
   defaultColor: {r: 0, g: 0, b: 0, a: 0}
   storedCells: []
---- !u!65 &2034514376
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2034514373}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &2034514377
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -29932,7 +29603,6 @@ GameObject:
   - component: {fileID: 2039314474}
   - component: {fileID: 2039314478}
   - component: {fileID: 2039314477}
-  - component: {fileID: 2039314476}
   - component: {fileID: 2039314475}
   m_Layer: 0
   m_Name: Puzzle Cell (6)
@@ -29976,27 +29646,6 @@ MonoBehaviour:
   prevCell: {fileID: 0}
   defaultColor: {r: 0, g: 0, b: 0, a: 0}
   storedCells: []
---- !u!65 &2039314476
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2039314473}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &2039314477
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -30218,7 +29867,6 @@ GameObject:
   - component: {fileID: 2070017403}
   - component: {fileID: 2070017407}
   - component: {fileID: 2070017406}
-  - component: {fileID: 2070017405}
   - component: {fileID: 2070017404}
   m_Layer: 0
   m_Name: Puzzle Cell (8)
@@ -30262,27 +29910,6 @@ MonoBehaviour:
   prevCell: {fileID: 0}
   defaultColor: {r: 0, g: 0, b: 0, a: 0}
   storedCells: []
---- !u!65 &2070017405
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2070017402}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &2070017406
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -30556,7 +30183,6 @@ GameObject:
   - component: {fileID: 2102815865}
   - component: {fileID: 2102815869}
   - component: {fileID: 2102815868}
-  - component: {fileID: 2102815867}
   - component: {fileID: 2102815866}
   m_Layer: 0
   m_Name: Puzzle Cell (11)
@@ -30600,27 +30226,6 @@ MonoBehaviour:
   prevCell: {fileID: 0}
   defaultColor: {r: 0, g: 0, b: 0, a: 0}
   storedCells: []
---- !u!65 &2102815867
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2102815864}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &2102815868
 MeshRenderer:
   m_ObjectHideFlags: 0

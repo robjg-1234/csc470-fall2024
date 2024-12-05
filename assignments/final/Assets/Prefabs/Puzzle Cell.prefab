@@ -96,9 +96,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82c70f54370bb07458d36aadf2c8bee3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cellColumn: 0
   cellRow: 0
+  cellColumn: 0
   rend: {fileID: 2788575665063910922}
   cellType: 1
   isFilled: 0
   prevCell: {fileID: 0}
+  defaultColor: {r: 0, g: 0, b: 0, a: 0}
+  storedCells: []

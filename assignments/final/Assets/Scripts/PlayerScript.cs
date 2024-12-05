@@ -56,13 +56,7 @@ public class PlayerScript : MonoBehaviour
                 {
                     if (Input.GetMouseButtonDown(1))
                     {
-                        puzzleMode();
-                        currentPuzzle.transform.GetComponent<Collider>().enabled = true;
-                        currentPuzzle.isSelected = false;
-                        currentPuzzle = null;
-                    } else if (Input.GetKeyDown(KeyCode.Escape)){
-                        paused = true;
-                        Cursor.lockState = CursorLockMode.None;
+                        gm.pauseAvailable = true;
                         puzzleMode();
                         currentPuzzle.transform.GetComponent<Collider>().enabled = true;
                         currentPuzzle.isSelected = false;
@@ -135,6 +129,7 @@ public class PlayerScript : MonoBehaviour
                             currentPuzzle = hitInfo.collider.gameObject.GetComponent<PanelScript>();
                             if (currentPuzzle != null)
                             {
+                                gm.pauseAvailable = false;
                                 gm.puzzleID = currentPuzzle.PuzzleID;
                                 currentPuzzle.isSelected = true;
                                 targetPosition = currentPuzzle.transform.position + currentPuzzle.transform.forward * 1.5f;

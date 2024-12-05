@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     public TMP_InputField sensField;
     bool isPaused = false;
     public Action pausedGame;
+    public bool pauseAvailable = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,7 +26,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) && !isPaused)
+        if (Input.GetKeyDown(KeyCode.Escape) && !isPaused && pauseAvailable)
         {
             isPaused = true;
             pauseMenu.SetActive(true);
