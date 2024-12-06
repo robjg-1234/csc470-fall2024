@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using Unity.IO.LowLevel.Unsafe;
 using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.AI;
 using UnityEngine.Rendering.PostProcessing;
 using UnityEngine.UI;
 
@@ -50,6 +49,7 @@ public class PlayerScript : MonoBehaviour
                     cc.Move(getCloser * playerSpeed * Time.deltaTime);
                     pitch = 0f;
                     yaw = currentPuzzle.transform.rotation.eulerAngles.y + 180;
+                    transform.eulerAngles = new Vector3(0f, yaw, 0f);
                     playerCamera.transform.eulerAngles = new Vector3(pitch, yaw, 0f);
                 }
                 else
@@ -99,22 +99,11 @@ public class PlayerScript : MonoBehaviour
                     yaw -= 360f;
                 }
 
+                gameObject.transform.eulerAngles = new Vector3(0f, yaw, 0f);
                 playerCamera.transform.eulerAngles = new Vector3(pitch, yaw, 0f);
                 Vector3 amountToMove = Vector3.zero;
-                if (pitch > 89f)
-                {
-                    amountToMove += playerCamera.transform.up.normalized * playerSpeed * vAxis;
-                }
-                else if (pitch < -89f)
-                {
-                    amountToMove += playerCamera.transform.up.normalized * playerSpeed * vAxis * -1;
-                }
-                else
-                {
-                    amountToMove += playerCamera.transform.forward.normalized * playerSpeed * vAxis;
-
-                }
-                amountToMove += playerCamera.transform.right.normalized * playerSpeed * hAxis;
+                amountToMove += transform.forward.normalized * playerSpeed * vAxis;
+                amountToMove += transform.right.normalized * playerSpeed * hAxis;
                 amountToMove.y += yVelocity;
                 amountToMove *= Time.deltaTime;
                 cc.Move(amountToMove);
@@ -136,8 +125,6 @@ public class PlayerScript : MonoBehaviour
                                 targetPosition.y += 1f;
                                 puzzleMode();
                             }
-
-
                         }
                     }
                 }

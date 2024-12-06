@@ -17,16 +17,18 @@ public class GameManager : MonoBehaviour
     bool isPaused = false;
     public Action pausedGame;
     public bool pauseAvailable = true;
+    public Image fade;
     // Start is called before the first frame update
     void Start()
     {
         instance = this;
+        StartCoroutine(fadeIn());
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) && !isPaused && pauseAvailable)
+        if (Input.GetKeyDown(KeyCode.Escape) && !isPaused && pauseAvailable && !fade.gameObject.activeSelf)
         {
             isPaused = true;
             pauseMenu.SetActive(true);
@@ -61,5 +63,15 @@ public class GameManager : MonoBehaviour
         pauseMenu.SetActive(false);
         isPaused = false;
         pausedGame?.Invoke();
+    }
+
+    IEnumerator fadeIn()
+    {
+        while (fade.color.a > 0)
+        {
+            fade.color = new Color(fade.color.r, fade.color.g, fade.color.b, fade.color.a - 0.5f * Time.deltaTime);
+            yield return null;
+        }
+        fade.gameObject.SetActive(false);
     }
 }
