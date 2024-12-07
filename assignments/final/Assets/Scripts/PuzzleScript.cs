@@ -154,7 +154,7 @@ public class PuzzleScript : MonoBehaviour
                     {
                         if (puzzleCells[currentPosY, currentPosX + 1] != null && puzzleCells[mirrorPosY, mirrorPosX - 1] != null)
                         {
-                            if (puzzleCells[currentPosY, currentPosX + 1].checkAvailability(direction) && puzzleCells[mirrorPosY, mirrorPosX - 1].checkAvailability(1) &&!(currentPosY == mirrorPosY && currentPosX + 1 == currentPosY - 1))
+                            if (puzzleCells[currentPosY, currentPosX + 1].checkAvailability(direction) && puzzleCells[mirrorPosY, mirrorPosX - 1].checkAvailability(1) &&!(currentPosY == mirrorPosY && currentPosX + 1 == mirrorPosX - 1))
                             {
                                 CellScript tempMirrorCell = mirrorCell;
                                 CellScript tempCell = currentCell;
@@ -185,7 +185,7 @@ public class PuzzleScript : MonoBehaviour
                     {
                         if (puzzleCells[currentPosY - 1, currentPosX] != null && puzzleCells[mirrorPosY + 1, mirrorPosX] != null)
                         {
-                            if (puzzleCells[currentPosY - 1, currentPosX].checkAvailability(direction) && puzzleCells[mirrorPosY + 1, mirrorPosX].checkAvailability(0) && !(currentPosY -1 == mirrorPosY +1 && currentPosX == currentPosY))
+                            if (puzzleCells[currentPosY - 1, currentPosX].checkAvailability(direction) && puzzleCells[mirrorPosY + 1, mirrorPosX].checkAvailability(0) && !(currentPosY -1 == mirrorPosY +1 && currentPosX == mirrorPosX))
                             {
                                 CellScript tempMirrorCell = mirrorCell;
                                 CellScript tempCell = currentCell;
@@ -216,7 +216,7 @@ public class PuzzleScript : MonoBehaviour
                     {
                         if (puzzleCells[currentPosY, currentPosX - 1] != null && puzzleCells[mirrorPosY, mirrorPosX + 1] != null)
                         {
-                            if (puzzleCells[currentPosY, currentPosX - 1].checkAvailability(direction) && puzzleCells[mirrorPosY, mirrorPosX + 1].checkAvailability(3) && !(currentPosY == mirrorPosY && currentPosX - 1 == currentPosY + 1))
+                            if (puzzleCells[currentPosY, currentPosX - 1].checkAvailability(direction) && puzzleCells[mirrorPosY, mirrorPosX + 1].checkAvailability(3) && !(currentPosY == mirrorPosY && currentPosX - 1 == mirrorPosX + 1))
                             {
                                 CellScript tempMirrorCell = mirrorCell;
                                 CellScript tempCell = currentCell;
@@ -247,7 +247,7 @@ public class PuzzleScript : MonoBehaviour
                     {
                         if (puzzleCells[currentPosY + 1, currentPosX] != null && puzzleCells[mirrorPosY - 1, mirrorPosX] != null)
                         {
-                            if (puzzleCells[currentPosY + 1, currentPosX].checkAvailability(direction) && puzzleCells[mirrorPosY - 1, mirrorPosX].checkAvailability(0) && !(currentPosY + 1 == mirrorPosY - 1 && currentPosX == currentPosY))
+                            if (puzzleCells[currentPosY + 1, currentPosX].checkAvailability(direction) && puzzleCells[mirrorPosY - 1, mirrorPosX].checkAvailability(2) && !(currentPosY + 1 == mirrorPosY - 1 && currentPosX == mirrorPosX))
                             {
                                 CellScript tempMirrorCell = mirrorCell;
                                 CellScript tempCell = currentCell;

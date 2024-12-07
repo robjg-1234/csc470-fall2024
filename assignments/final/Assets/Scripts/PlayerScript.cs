@@ -24,6 +24,7 @@ public class PlayerScript : MonoBehaviour
     DepthOfField dof;
     Vignette vig;
     bool paused = false;
+    bool ending = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -38,7 +39,7 @@ public class PlayerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!paused)
+        if (!paused && !ending)
         {
             if (currentPuzzle != null)
             {
@@ -124,6 +125,12 @@ public class PlayerScript : MonoBehaviour
                                 targetPosition = currentPuzzle.transform.position + currentPuzzle.transform.forward * 1.5f;
                                 targetPosition.y += 1f;
                                 puzzleMode();
+                            }
+                        } else if (hitInfo.collider.CompareTag("campfire"))
+                        {
+                            if (hitInfo.collider.gameObject.GetComponent<bonfireScript>().tryEndGame())
+                            {
+                                ending = true;
                             }
                         }
                     }
