@@ -23,7 +23,7 @@ Work on the visual and sound elements of the game.
 <h3>12/08/2024</h3>
 Evaluate the state of the game and see if it is in a good state to have more features added or work on polishing the final elements.
 <h3>12/11/2024</h3>
-Work on the website, trailer, and description of the game.
+Work on the website, trailer, or description of the game.
 
 
 
