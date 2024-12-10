@@ -168,7 +168,7 @@ public class CellScript : MonoBehaviour
                     }
                 }
             }
-            if (targetCell != null)
+            if (targetCell != null && targetCell != this)
             {
                 targetCell.storedCells.Add(this);
             }
@@ -257,22 +257,39 @@ public class CellScript : MonoBehaviour
             if (timesPassed < 1)
             {
                 timesPassed += 1;
-                targetCell.fillCell(attachedColor);
+                targetCell = targetCell.changingCellLocation(attachedColor);
                 return targetCell;
             }
             else
             {
                 timesPassed += 1;
                 fillCell(attachedColor);
-                targetCell.fillCell(attachedColor);
+                targetCell = targetCell.changingCellLocation(attachedColor);
                 return targetCell;
             }
             
         }
         else
         {
-            fillCell(attachedColor);
-            targetCell.fillCell(attachedColor);
+            if (targetCell != this)
+            {
+                if (cellType != 3)
+                {
+                    fillCell(attachedColor);
+                    targetCell = targetCell.changingCellLocation(attachedColor);
+                }
+                else
+                {
+                    fillCell(attachedColor);
+                    targetCell.fillCell(attachedColor);
+                }
+            }
+            else
+            {
+                fillCell(attachedColor);
+                targetCell.fillCell(attachedColor);
+            }
+            
             return targetCell;
         }
     }

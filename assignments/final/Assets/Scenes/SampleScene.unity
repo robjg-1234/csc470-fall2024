@@ -30464,7 +30464,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1797576047985878217, guid: 8b71f8480d3ec1b47b1dbf2cb6f55d09, type: 3}
       propertyPath: cellType
-      value: 0
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1797576047985878217, guid: 8b71f8480d3ec1b47b1dbf2cb6f55d09, type: 3}
       propertyPath: cellColumn
