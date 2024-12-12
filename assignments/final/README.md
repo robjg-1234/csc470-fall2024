@@ -5,11 +5,11 @@
 <p>I want to be able to create two different visual styles: one for the panels, which would be more retro or pixelated, and one for the world, which would be more like a painting or like “The Witness” visual style.</p>
 <p>As for audio, I would like to keep a relaxing vibe with an emphasis on environmental sounds like wind, birds, or water to maintain a specific feeling when playing but not have an emphasis on the sound. This also goes closely together with the theme of the game, which would focus on the gameplay aspect, so the other elements would make you get into the zone by being things you can relax to in case you get frustrated while trying to solve a puzzle. So you could also take in the game as a walking simulator since there isn't going to be much of a story. Just complete a certain number of puzzles to unlock the final puzzle and escape.</p>
 <h2>Low-Bar</h2>
-	<p>As a minimum, I want to construct fifteen of the puzzles and have a map layout that allows you to choose where to go and not have a direct gameplay line. I want to implement at least five different cell types that change the gameplay inside the puzzles. Additionally, there should be a final big puzzle that has all of these elements combined, and all the puzzles must be finished before they are unlocked.</p>
+As a minimum, I want to construct fifteen of the puzzles and have a map layout that allows you to choose where to go and not have a direct gameplay line. I want to implement at least five different cell types that change the gameplay inside the puzzles. Additionally, there should be a final big puzzle that has all of these elements combined, and all the puzzles must be finished before they are unlocked.
 <h2>Expected</h2>
-	<p>I expect to create an enjoyable world to walk around and implement an extra cell type alongside sound effects that provide good feedback and enhance the user's gameplay.</p>
+I expect to create an enjoyable world to walk around and implement an extra cell type alongside sound effects that provide good feedback and enhance the user's gameplay.
 <h2>High-Bar</h2>
-	<p>I would like to make the game look nice and provide the relaxing feeling that I want it to have. Additionally, I would like to have twenty-five puzzles and five additional puzzles for one extra cell type, and also more emphasis on the sound to help the feeling, not just for gameplay purposes. Additionally, make the panel controls feel as good as possible.</p>
+I would like to make the game look nice and provide the relaxing feeling that I want it to have. Additionally, I would like to have twenty-five puzzles and five additional puzzles for one extra cell type, and also more emphasis on the sound to help the feeling, not just for gameplay purposes. Additionally, make the panel controls feel as good as possible.
 <br>
 <h2>Timeline</h2>
 <h3>11/29/2024</h3>
@@ -24,6 +24,9 @@ Work on the visual and sound elements of the game.
 Evaluate the state of the game and see if it is in a good state to have more features added or work on polishing the final elements.
 <h3>12/11/2024</h3>
 Work on the website, trailer, or description of the game.
+
+
+[Game Website](https://robjg-1234.github.io/csc470-fall2024/assignments/final/finalwebsite.html)
 
 
 

@@ -14,4 +14,4 @@ The game has minimalist visuals and focuses on helping the player focus on the p
 
 ---
 
-You can play the game here: [game] (https://robjg-1234.github.io/csc470-fall2024/games/final/) 
+You can play the game here: [game](https://robjg-1234.github.io/csc470-fall2024/games/final/) 
