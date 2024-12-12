@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
     public Action pausedGame;
     public bool pauseAvailable = true;
     public Image fade;
+    public AudioClip puzzleUnlockSound;
     // Start is called before the first frame update
     void Start()
     {
@@ -36,6 +37,7 @@ public class GameManager : MonoBehaviour
     }
     public void userBeatAPuzzle()
     {
+        SoundManager.unlockPuzzle();
         levelCompleted?.Invoke();
     }
     public void changeTextValue()

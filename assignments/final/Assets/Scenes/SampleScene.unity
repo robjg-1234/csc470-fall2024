@@ -31318,6 +31318,7 @@ MonoBehaviour:
   sensField: {fileID: 743814469}
   pauseAvailable: 1
   fade: {fileID: 1345886173}
+  puzzleUnlockSound: {fileID: 8300000, guid: 2659abefbe7d17a4c93b268d69fdc1ae, type: 3}
 --- !u!4 &1270526774
 Transform:
   m_ObjectHideFlags: 0
@@ -40037,6 +40038,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a496e98d15e1bd4ab8f88a5b9a469a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fire: {fileID: 8300000, guid: 09913b08b178049478db93d5efdb51b5, type: 3}
   fireParticles: {fileID: 584739130}
   finalPanel: {fileID: 1345886173}
 --- !u!4 &1603995742 stripped

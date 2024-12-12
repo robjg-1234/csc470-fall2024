@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class bonfireScript : MonoBehaviour
 {
+    public AudioClip fire;
     public GameObject fireParticles;
     GameManager gameManager;
     int puzzleCount = 25;
@@ -24,6 +25,7 @@ public class bonfireScript : MonoBehaviour
         {
             fireParticles.SetActive(true);
             endGame = true;
+            SoundManager.startFire(fire);
         }
     }
     public bool tryEndGame()

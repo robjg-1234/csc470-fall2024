@@ -32,7 +32,10 @@ public class PanelScript : MonoBehaviour
                 remainingPuzzles--;
                 if (remainingPuzzles <= 0)
                 {
-                    isUnlocked = true;
+                    if (!isUnlocked)
+                    {
+                        isUnlocked = true;
+                    }
                 }
             }
         }
