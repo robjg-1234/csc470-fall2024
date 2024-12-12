@@ -267,7 +267,7 @@ public class CellScript : MonoBehaviour
                 targetCell = targetCell.changingCellLocation(attachedColor);
                 return targetCell;
             }
-
+            
         }
         else
         {
@@ -289,7 +289,7 @@ public class CellScript : MonoBehaviour
                 fillCell(attachedColor);
                 targetCell.fillCell(attachedColor);
             }
-
+            
             return targetCell;
         }
     }
@@ -312,24 +312,21 @@ public class CellScript : MonoBehaviour
     {
         if (cellType != 1)
         {
-            if (cellType != 6)
+            isFilled = false;
+            rend.material.color = defaultColor;
+            if (storedCells.Count > 0)
             {
-                isFilled = false;
-                rend.material.color = defaultColor;
-                if (storedCells.Count > 0)
+                for (int i = 0; i < storedCells.Count; i++)
                 {
-                    for (int i = 0; i < storedCells.Count; i++)
-                    {
-                        storedCells[i].backToDefault();
-                    }
+                    storedCells[i].backToDefault();
                 }
-                storedCells.Clear();
-                if (cellType == 5)
+            }
+            storedCells.Clear();
+            if (cellType == 5)
+            {
+                if (timesPassed > 0)
                 {
-                    if (timesPassed > 0)
-                    {
-                        timesPassed -= 1;
-                    }
+                    timesPassed -= 1;
                 }
             }
         }
